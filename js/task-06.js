@@ -4,9 +4,9 @@ let verification = document.querySelector('#validation-input');
 const verificationValue = verification.getAttribute('data-length');
 
 
-verification.addEventListener('blur', event => {
+verification.addEventListener('blur', () => {
 
-    if(event.target.value.length === verificationValue) {
+    if(verification.value.length <= verificationValue) {
        verification.classList.add('valid')
         if (verification.classList.contains('invalid')) {
             verification.classList.remove('invalid')
@@ -19,4 +19,3 @@ verification.addEventListener('blur', event => {
         verification.classList.add('invalid')
     }
 })
-//ничего не получется ((((((((
