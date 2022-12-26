@@ -6,7 +6,7 @@ const verificationValue = verification.getAttribute('data-length');
 
 verification.addEventListener('blur', () => {
 
-    if(verification.value.length <= verificationValue) {
+    if(verification.value.length == verificationValue) {
        verification.classList.add('valid')
         if (verification.classList.contains('invalid')) {
             verification.classList.remove('invalid')
